@@ -3,7 +3,7 @@
 #include "full_bd.h"
 
 extern "C" __declspec(dllexport) void* start() {//создание внутренних структур
-	full_bd* bd =new full_bd();;
+	full_bd* bd =new full_bd();
 	bd->constraction = border_set(0, 0, 0);
 	return bd;
 }

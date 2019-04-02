@@ -6,9 +6,7 @@ using namespace std;
 const platform koef_norm = platform(Vector3(0, 0, 110), platf_angl(19.2, 20.1, 0));
 
 
-extern "C" __declspec(dllexport) void set_construction(void* in_bd, platform *con){
-	full_bd* bd = static_cast<full_bd*>(in_bd);
-	cout << bd << endl;
+extern "C" __declspec(dllexport) void set_construction(full_bd* bd, platform *con){
 	bd->constraction = border_set(0, 0, 0);
 	*con = bd->constraction;
 }
